@@ -25,6 +25,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Static files
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static('./node_modules/bulma/'))
+app.use(express.static('./node_modules/bootstrap-icons/'))
 
 
 app.use('/', routes);

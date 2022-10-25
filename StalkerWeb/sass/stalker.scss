@@ -1,7 +1,25 @@
+@import 'media-queries';
+
 .wrapper
 {
     display: block;
     width: 50%;
     margin: auto;
-    text-align: center;
+    margin-top: 10px;
+
+    @include xs {
+        width: 100%;
+    }
+
+    @include sm {
+        width: 95%;
+    }
+
+    @include md {
+        width: 95%;
+    }
+
+    @include lg {
+        width:90%;
+    }
 }

@@ -1,0 +1,15 @@
+Data needs
+------------------
+
+For each game
+- Total session count
+- Longest session runtime
+- Shortest session runtime
+- Average session runtime
+
+All games
+- Game with most and least sessions
+- Game with most and least runtime
+
+
+Selected games?
