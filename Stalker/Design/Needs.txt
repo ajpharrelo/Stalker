@@ -1,0 +1,7 @@
+Process needs
+- To be tracked
+- Start and exit to be handled
+
+Session needs
+- To have runtime calculated
+- 
