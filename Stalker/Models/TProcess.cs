@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Text.Json;
 
-namespace Stalker.Models
+namespace Stalker
 {
-    internal class TProcess : ITProcess
+    public class TProcess : ITProcess
     {
         public enum TProcesssStatus
         {

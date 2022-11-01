@@ -8,9 +8,9 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace Stalker.Models
+namespace Stalker
 {
-    internal class TProcessSession : ITProcess
+    public class TProcessSession : ITProcess
     {
         public Guid ID { get; set; }
         public string Name { get; set; }
