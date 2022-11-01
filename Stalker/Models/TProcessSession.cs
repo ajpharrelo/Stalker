@@ -15,16 +15,18 @@ namespace Stalker.Models
         public Guid ID { get; set; }
         public string Name { get; set; }
         public string ExecutablePath { get; set; }
+        public string SessionDate { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime ExitTime { get; set; }
 
-        public TProcessSession(Guid id, string name, string executablePath, DateTime startTime, DateTime exitTime)
+        public TProcessSession(Guid id, string name, string executablePath, DateTime startTime, DateTime exitTime, string sessionDate)
         {
             ID = id;
             Name = name;
             ExecutablePath = executablePath;
             StartTime = startTime;
             ExitTime = exitTime;
+            SessionDate = sessionDate;
         }
 
         public TProcessSession(){}

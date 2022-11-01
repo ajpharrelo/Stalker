@@ -78,7 +78,8 @@ namespace Stalker
                         Name = findProcess.Name,
                         ExecutablePath = findProcess.ExecutablePath,
                         StartTime = p.StartTime,
-                        ExitTime = p.ExitTime
+                        ExitTime = p.ExitTime,
+                        SessionDate = DateTime.Now.ToShortDateString()
                     };
 
                     if(sessions != null)
