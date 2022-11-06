@@ -76,6 +76,7 @@ namespace StalkerUI
                 lblAppGuid.Text = "GUID: " + selectedApp.ID.ToString();
                 lblExecPath.Text = "Executable path: " + selectedApp.ExecutablePath;
                 lblSession.Text = selectedApp.Name + " - Sessions";
+                lblSessionCount.Text = "Total session count: " + sessionList.FindAll(s => s.ID == selectedApp.ID).Count;
 
                 UpdateSessions();
             }
