@@ -35,6 +35,7 @@ namespace StalkerUI
 
         private void UpdateSessions()
         {
+            sessionGridView.Rows.Clear();
             foreach (TProcessSession ps in sessionList)
             {
                 if (ps.ID == selectedApp.ID)
@@ -72,6 +73,15 @@ namespace StalkerUI
                 lblAppGuid.Text = "GUID: " + selectedApp.ID.ToString();
                 lblExecPath.Text = "Executable path: " + selectedApp.ExecutablePath;
                 lblSession.Text = selectedApp.Name + " - Sessions";
+
+                UpdateSessions();
+            }
+            else
+            {
+                gbxAppControls.Text = "Selected - None";
+                lblAppGuid.Text = "GUID: ";
+                lblExecPath.Text = "Executable path: ";
+                lblSession.Text = "None - Sessions";
             }
         }
 
