@@ -56,8 +56,6 @@ namespace Stalker
 
                 using(StreamReader sr = File.OpenText(processListPath))
                 {
-                    // ERROR
-                    // Each field in TProcess must be assigned in constructor
                     TProcess[]? processes = JsonSerializer.Deserialize<TProcess[]>(sr.ReadToEnd());
                     foreach (TProcess p in processes)
                     {
@@ -70,8 +68,9 @@ namespace Stalker
             }
             else
             {
-                Console.WriteLine("Process list file not found at " + processListPath);
-                return null;
+                // If no list file found create a new one and then populate with an empty JSON array.
+                File.WriteAllText(processListPath, "[]");
+                return new List<TProcess>();
             }
         }
 

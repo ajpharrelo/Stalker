@@ -43,7 +43,9 @@ namespace Stalker
                 }
             }
             else
-                throw new FileNotFoundException();
+                // If no list file found create a new one and then populate with an empty JSON array.
+                File.WriteAllText(listPath, "[]");
+                return new List<TProcessSession>();
 
         }
 

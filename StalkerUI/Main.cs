@@ -51,9 +51,12 @@ namespace StalkerUI
         private void UpdateListBox()
         {
             processListBox.Items.Clear();
-            foreach (TProcess tp in processList)
+            if(processList != null)
             {
-                processListBox.Items.Add(tp.Name);
+                foreach (TProcess tp in processList)
+                {
+                    processListBox.Items.Add(tp.Name);
+                }
             }
         }
 
