@@ -74,6 +74,25 @@ namespace Stalker
                 return null;
             }
         }
+
+        public static bool WriteProcessList(string processListPath, List<TProcess> list)
+        {
+            if(Directory.Exists(Path.GetDirectoryName(processListPath)))
+            {
+                var options = new JsonSerializerOptions()
+                {
+                    WriteIndented = true
+                };
+                string listJson = JsonSerializer.Serialize(list, options);
+                File.WriteAllText(processListPath, listJson);
+                return true;
+
+            }
+            else
+            {
+                return false;
+            }
+        }
         #endregion
     }
 }

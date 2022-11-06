@@ -1,3 +1,7 @@
 .vs/
-Stalker/bin/
+bin/
 Stalker/obj/
+/bin/
+*.dll
+*.dll
+*.cache
