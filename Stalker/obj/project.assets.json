@@ -2064,7 +2064,8 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.Extensions.Hosting >= 6.0.1",
-      "Microsoft.Extensions.Hosting.WindowsServices >= 6.0.1"
+      "Microsoft.Extensions.Hosting.WindowsServices >= 6.0.1",
+      "System.Diagnostics.EventLog >= 6.0.0"
     ]
   },
   "packageFolders": {
@@ -2119,6 +2120,10 @@
           "Microsoft.Extensions.Hosting.WindowsServices": {
             "target": "Package",
             "version": "[6.0.1, )"
+          },
+          "System.Diagnostics.EventLog": {
+            "target": "Package",
+            "version": "[6.0.0, )"
           }
         },
         "imports": [

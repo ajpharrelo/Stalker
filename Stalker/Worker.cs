@@ -27,7 +27,6 @@ namespace Stalker
             string processListFile = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Stalker\list.json";
             stalkedProcesses = TProcess.ReadProcessList(processListFile);
 
-            _logger.LogInformation("Stalker service started at " + DateTime.Now.ToString());
 
             while (!stoppingToken.IsCancellationRequested)
             {
@@ -99,6 +98,12 @@ namespace Stalker
                     findProcess.StalkedProcess.Dispose();
                 }
             }
+        }
+
+        public override Task StartAsync(CancellationToken cancellationToken)
+        {
+            _logger.LogInformation("Stalker service started at " + DateTime.Now.ToString());
+            return base.StartAsync(cancellationToken);
         }
         public override Task StopAsync(CancellationToken cancellationToken)
         {
