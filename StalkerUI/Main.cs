@@ -8,6 +8,9 @@ namespace StalkerUI
         private List<TProcess> processList = TProcess.ReadProcessList(
             Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Stalker\list.json");
 
+        private List<TProcessSession> sessionList = TProcessSession.ReadSessionList(
+            Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Stalker\sessions.json");
+
         private string listPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Stalker\list.json";
         private string selectedGame = "";
         private bool sessionVisible = false;
@@ -27,6 +30,17 @@ namespace StalkerUI
             else
             {
                 btnSessions.Visible = true;
+            }
+        }
+
+        private void UpdateSessions()
+        {
+            foreach (TProcessSession ps in sessionList)
+            {
+                if (ps.ID == selectedApp.ID)
+                {
+                    sessionGridView.Rows.Add(ps.SessionDate, ps.StartTime, ps.ExitTime);
+                }
             }
         }
 
