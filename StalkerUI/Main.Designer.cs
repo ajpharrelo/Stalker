@@ -46,9 +46,10 @@
             this.lblSession = new System.Windows.Forms.Label();
             this.sessionGridView = new System.Windows.Forms.DataGridView();
             this.sessionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.startTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.exitTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblSessionCount = new System.Windows.Forms.Label();
             this.gbxAdd.SuspendLayout();
             this.pnlControls.SuspendLayout();
             this.gbxAppControls.SuspendLayout();
@@ -155,11 +156,12 @@
             this.gbxAppControls.Controls.Add(this.btnSessions);
             this.gbxAppControls.Controls.Add(this.btnRemove);
             this.gbxAppControls.Controls.Add(this.lblAppGuid);
+            this.gbxAppControls.Controls.Add(this.lblSessionCount);
             this.gbxAppControls.Controls.Add(this.lblExecPath);
             this.gbxAppControls.Dock = System.Windows.Forms.DockStyle.Top;
             this.gbxAppControls.Location = new System.Drawing.Point(0, 0);
             this.gbxAppControls.Name = "gbxAppControls";
-            this.gbxAppControls.Size = new System.Drawing.Size(852, 117);
+            this.gbxAppControls.Size = new System.Drawing.Size(852, 140);
             this.gbxAppControls.TabIndex = 2;
             this.gbxAppControls.TabStop = false;
             this.gbxAppControls.Text = "Selected Application - None";
@@ -225,9 +227,9 @@
             this.sessionGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.sessionGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.sessionDate,
-            this.duration,
             this.startTime,
-            this.exitTime});
+            this.exitTime,
+            this.duration});
             this.sessionGridView.Location = new System.Drawing.Point(12, 386);
             this.sessionGridView.Name = "sessionGridView";
             this.sessionGridView.ReadOnly = true;
@@ -245,12 +247,6 @@
             this.sessionDate.Name = "sessionDate";
             this.sessionDate.ReadOnly = true;
             // 
-            // duration
-            // 
-            this.duration.HeaderText = "Duration";
-            this.duration.Name = "duration";
-            this.duration.ReadOnly = true;
-            // 
             // startTime
             // 
             this.startTime.HeaderText = "Start Time";
@@ -262,6 +258,21 @@
             this.exitTime.HeaderText = "Exit Time";
             this.exitTime.Name = "exitTime";
             this.exitTime.ReadOnly = true;
+            // 
+            // duration
+            // 
+            this.duration.HeaderText = "Duration";
+            this.duration.Name = "duration";
+            this.duration.ReadOnly = true;
+            // 
+            // lblSessionCount
+            // 
+            this.lblSessionCount.AutoSize = true;
+            this.lblSessionCount.Location = new System.Drawing.Point(15, 112);
+            this.lblSessionCount.Name = "lblSessionCount";
+            this.lblSessionCount.Size = new System.Drawing.Size(110, 15);
+            this.lblSessionCount.TabIndex = 1;
+            this.lblSessionCount.Text = "Total session count:";
             // 
             // Main
             // 
@@ -307,8 +318,9 @@
         private Label lblSession;
         private DataGridView sessionGridView;
         private DataGridViewTextBoxColumn sessionDate;
-        private DataGridViewTextBoxColumn duration;
         private DataGridViewTextBoxColumn startTime;
         private DataGridViewTextBoxColumn exitTime;
+        private DataGridViewTextBoxColumn duration;
+        private Label lblSessionCount;
     }
 }

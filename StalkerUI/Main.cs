@@ -40,7 +40,10 @@ namespace StalkerUI
             {
                 if (ps.ID == selectedApp.ID)
                 {
-                    sessionGridView.Rows.Add(ps.SessionDate, ps.StartTime, ps.ExitTime);
+                    TimeSpan ts = ps.StartTime - ps.ExitTime;
+
+                    sessionGridView.Rows.Add(ps.SessionDate, ps.StartTime, ps.ExitTime, 
+                        ts.ToString(@"hh\:mm\:ss"));
                 }
             }
         }
