@@ -102,6 +102,9 @@ namespace Stalker
 
         public override Task StartAsync(CancellationToken cancellationToken)
         {
+
+            // TODO Need to fix service startup
+            // Current error code: 1067 
             _logger.LogInformation("Stalker service started at " + DateTime.Now.ToString());
             return base.StartAsync(cancellationToken);
         }
