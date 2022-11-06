@@ -46,6 +46,7 @@
             this.lblSession = new System.Windows.Forms.Label();
             this.sessionGridView = new System.Windows.Forms.DataGridView();
             this.sessionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.startTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.exitTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbxAdd.SuspendLayout();
@@ -224,6 +225,7 @@
             this.sessionGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.sessionGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.sessionDate,
+            this.duration,
             this.startTime,
             this.exitTime});
             this.sessionGridView.Location = new System.Drawing.Point(12, 386);
@@ -242,6 +244,12 @@
             this.sessionDate.HeaderText = "Session Date";
             this.sessionDate.Name = "sessionDate";
             this.sessionDate.ReadOnly = true;
+            // 
+            // duration
+            // 
+            this.duration.HeaderText = "Duration";
+            this.duration.Name = "duration";
+            this.duration.ReadOnly = true;
             // 
             // startTime
             // 
@@ -299,6 +307,7 @@
         private Label lblSession;
         private DataGridView sessionGridView;
         private DataGridViewTextBoxColumn sessionDate;
+        private DataGridViewTextBoxColumn duration;
         private DataGridViewTextBoxColumn startTime;
         private DataGridViewTextBoxColumn exitTime;
     }
